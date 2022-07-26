@@ -1,0 +1,27 @@
+WARNING  django.request:log.py:224 Forbidden: /users/login/
+WARNING  django.request:log.py:224 Forbidden: /users/login/
+ERROR    django.request:log.py:224 Internal Server Error: /users/subscribe/
+Traceback (most recent call last):
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/jeevan/Internship/paradox_env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/jeevan/Internship/paradox_backend_v3(MK)/users/views.py", line 313, in user_subscription
+    intent = confirm_payment(secret)
+  File "/home/jeevan/Internship/paradox_backend_v3(MK)/users/views.py", line 87, in confirm_payment
+    raise Exception("Payment Incomplete")
+Exception: Payment Incomplete
